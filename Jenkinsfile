@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Charan304304/web-devops-app.git'
-            }
-        }
         stage('Build Docker Image') {
             steps {
                  bat   'docker build -t web-devops-app .'
